@@ -18,9 +18,13 @@ export default function heroImageChanger() {
   }
 
   // Delete interval if section not in viewport
-  // document.addEventListener("scroll", () => {
-  //   if (!isElementInViewport(hero)) {
-  //     console.log("Not in view port");
-  //   }
-  // });
+  document.addEventListener("scroll", () => {
+    if (!isElementInViewport(hero)) {
+      clearInterval(interval);
+    } else if (!interval) {
+      interval = setInterval(() => {
+        setUpImage();
+      }, intervalSeconds);
+    }
+  });
 }
