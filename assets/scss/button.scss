@@ -1,0 +1,10 @@
+@import "vars";
+
+.button {
+  background-color: $black-color;
+  color: $yellow-color;
+  display: block;
+  cursor: pointer;
+  padding: 19px 50px;
+  border: none;
+}

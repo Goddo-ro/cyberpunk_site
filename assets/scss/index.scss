@@ -1,9 +1,36 @@
+@import 'vars';
+@import 'mixins';
+
 @import "normalize";
+@import "button";
+@import "hero/hero";
 
 * {
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: 'PT Mono', monospace;
+h2 {
+  font: 30px $header-font;
+  line-height: 30px;
+  margin: 0;
 }
+
+p, a, button {
+  font: 16px $text-font;
+  line-height: 32px;
+}
+
+section {
+  min-height: 100vh;
+  background-position-x: center;
+  display: flex;
+}
+
+.container {
+  height: inherit;
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+
