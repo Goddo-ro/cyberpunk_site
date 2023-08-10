@@ -4,6 +4,7 @@
 @import "normalize";
 @import "button";
 @import "hero/hero";
+@import "game-preview/game-preview";
 
 * {
   box-sizing: border-box;
@@ -21,10 +22,20 @@ p, a, button {
   line-height: 32px;
 }
 
+a {
+  color: $blue-color;
+  text-decoration: none;
+}
+
 section {
   min-height: 100vh;
   background-position-x: center;
   display: flex;
+}
+
+section:not(#hero) {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .container {
@@ -32,7 +43,9 @@ section {
   width: 100%;
   max-width: 1600px;
   margin-inline: auto;
-  padding: 20px 36px;
+  padding: 20px 0;
 }
 
-
+.container > * {
+  margin-inline: 12px;
+}

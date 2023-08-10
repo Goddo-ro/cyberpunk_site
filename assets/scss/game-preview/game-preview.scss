@@ -1,0 +1,21 @@
+@import "../mixins";
+
+#game-preview {
+  margin-top: 30px;
+}
+
+.container > .game-preview-grid {
+  margin-inline: 0;
+}
+
+.game-preview-grid {
+  display: grid;
+  gap: 32px;
+
+  img {
+    object-fit: none;
+    height: 100%;
+    width: 100%;
+    @include cut-corners;
+  }
+}

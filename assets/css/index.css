@@ -318,6 +318,7 @@ template {
 
 #hero {
   background-image: url("../../../assets/images/hero_carousel/1.jpg");
+  min-height: calc(100vh - 50px);
 }
 
 #hero > .container {
@@ -344,10 +345,11 @@ template {
   width: 100%;
 }
 
-.game-info {
+.container > .game-info {
   background-color: #F8F200;
   padding: 30px 38px;
   clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+  margin-inline: 0;
   position: absolute;
   top: unset;
   right: 0;
@@ -359,6 +361,27 @@ template {
   align-items: center;
   gap: 25px;
   text-align: center;
+  margin-inline: 0;
+}
+
+#game-preview {
+  margin-top: 30px;
+}
+
+.container > .game-preview-grid {
+  margin-inline: 0;
+}
+
+.game-preview-grid {
+  display: grid;
+  gap: 32px;
+}
+.game-preview-grid img {
+  object-fit: none;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+  margin-inline: 0;
 }
 
 * {
@@ -377,10 +400,20 @@ p, a, button {
   line-height: 32px;
 }
 
+a {
+  color: #52BEDC;
+  text-decoration: none;
+}
+
 section {
   min-height: 100vh;
   background-position-x: center;
   display: flex;
+}
+
+section:not(#hero) {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .container {
@@ -388,7 +421,11 @@ section {
   width: 100%;
   max-width: 1600px;
   margin-inline: auto;
-  padding: 20px 36px;
+  padding: 20px 0;
+}
+
+.container > * {
+  margin-inline: 12px;
 }
 
 /*# sourceMappingURL=index.css.map */

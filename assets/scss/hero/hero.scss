@@ -1,8 +1,11 @@
 @import '../vars';
 @import '../mixins';
 
+$game-info-bottom: -50px;
+
 #hero {
   background-image: url("../../../assets/images/hero_carousel/1.jpg");
+  min-height: calc(100vh + $game-info-bottom);
 }
 
 #hero > .container {
@@ -21,12 +24,13 @@
   }
 }
 
-.game-info {
+.container > .game-info {
   background-color: $yellow-color;
   padding: 30px 38px;
   @include cut-corners;
-  @include absolute-position($top: unset, $bottom: -50px);
+  @include absolute-position($top: unset, $bottom: $game-info-bottom);
   @include flex($direction: column, $justify-content: space-between);
   gap: 25px;
   text-align: center;
+  margin-inline: 0;
 }
