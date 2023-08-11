@@ -364,6 +364,37 @@ template {
   margin-inline: 0;
 }
 
+@media screen and (min-width: 1024px) {
+  #hero {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #hero > .container {
+    padding-bottom: 0;
+    padding-inline: 36px;
+  }
+  .hero-header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hero-header .hero-header__links {
+    justify-content: center;
+    gap: 40px;
+    width: fit-content;
+  }
+  .container > .game-info {
+    position: unset;
+    margin-left: auto;
+    padding: 70px;
+    max-width: 600px;
+    align-items: flex-start;
+  }
+  .container > .game-info h2 {
+    text-align: left;
+  }
+}
 #game-preview {
   margin-top: 30px;
 }
@@ -426,6 +457,17 @@ section:not(#hero) {
 
 .container > * {
   margin-inline: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 48px;
+    line-height: normal;
+  }
+  p, a, button {
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

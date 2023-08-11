@@ -1,6 +1,7 @@
 @import '../vars';
 @import '../mixins';
 
+$game-info-max-width: 600px;
 $game-info-bottom: -50px;
 
 #hero {
@@ -33,4 +34,43 @@ $game-info-bottom: -50px;
   gap: 25px;
   text-align: center;
   margin-inline: 0;
+}
+
+// Laptops layout
+
+@media screen and (min-width: 1024px) {
+  #hero {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #hero > .container {
+    padding-bottom: 0;
+    padding-inline: 36px;
+  }
+
+  .hero-header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .hero-header__links {
+      justify-content: center;
+      gap: 40px;
+      width: fit-content;
+    }
+  }
+
+  .container > .game-info {
+    position: unset;
+    margin-left: auto;
+    padding: 70px;
+    max-width: $game-info-max-width;
+    align-items: flex-start;
+
+    h2 {
+      text-align: left;
+    }
+  }
 }

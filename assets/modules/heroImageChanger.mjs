@@ -14,7 +14,7 @@ export default function heroImageChanger() {
   // Function that changes background image
   function setUpImage() {
     index = (index + 1) % images.length;
-    hero.style.backgroundImage = `url(../../../assets/images/hero_carousel/${images[index]})`;
+    hero.style.backgroundImage = `url(assets/images/hero_carousel/${images[index]})`;
   }
 
   // Delete interval if section not in viewport
