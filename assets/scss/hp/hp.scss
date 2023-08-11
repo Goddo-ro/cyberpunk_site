@@ -1,8 +1,6 @@
 @import "../vars";
 @import "../mixins";
 
-$list-icons-size: 24px;
-
 #hp {
   background-image: url("../../../assets/images/hp_background.png");
 
@@ -34,25 +32,6 @@ $list-icons-size: 24px;
 }
 
 .hp-text-container {
-  ul {
-    list-style-type: none;
-    padding: 0;
-
-    li {
-      display: flex;
-      gap: 18px;
-      line-height: normal;
-
-      &:not(:last-child) {
-        margin-bottom: 16px;
-      }
-
-      img {
-        width: $list-icons-size;
-      }
-    }
-  }
-
   .button {
     width: fit-content;
     margin-top: 40px;

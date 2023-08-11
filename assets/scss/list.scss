@@ -1,0 +1,22 @@
+@import "vars";
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    gap: 18px;
+    line-height: normal;
+    height: fit-content;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    img {
+      width: $list-icons-size;
+      margin: 0;
+    }
+  }
+}
