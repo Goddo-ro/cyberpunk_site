@@ -58,3 +58,56 @@ $list-icons-size: 24px;
     margin-top: 40px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  #hp .container {
+    flex-direction: row;
+    gap: 32px;
+    padding-inline: $laptops-margin-inline;
+
+    & > * {
+      width: 100%;
+      margin-inline: 0;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .hp-images-container {
+    gap: 25px;
+    
+    .hp-images-collaboration {
+      flex-direction: column;
+      gap: 25px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hp-images-container {
+    .hp-images-collaboration {
+      flex-direction: row;
+      gap: 25px;
+      width: 90%;
+
+      :first-child {
+        max-width: 80px;
+      }
+
+      :nth-child(2) {
+        max-width: 90px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  }
+}

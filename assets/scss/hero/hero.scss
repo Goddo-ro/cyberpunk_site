@@ -18,6 +18,10 @@ $game-info-bottom: -50px;
   @include flex($direction: column);
   gap: 10px;
 
+  img {
+    max-width: 300px;
+  }
+
   .hero-header__links {
     @include flex($justify-content: space-around);
     width: 100%;
