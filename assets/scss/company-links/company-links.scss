@@ -1,0 +1,38 @@
+@import "../vars";
+@import "../mixins";
+
+.company-links {
+  min-height: unset;
+  padding: 0 !important;
+  height: fit-content;
+
+  .container {
+    @include flex($direction: column, $justify-content: space-between);
+    gap: 25px;
+
+    & > * {
+      @include flex($direction: column, $justify-content: space-between);
+      gap: 25px;
+    }
+
+    a {
+      color: $black-color;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .company-links {
+    .container {
+      gap: 32px;
+      flex-direction: row;
+
+      & > * {
+        flex-direction: row;
+        gap: 32px;
+      }
+    }
+  }
+
+}

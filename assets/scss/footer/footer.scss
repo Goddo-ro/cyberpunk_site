@@ -1,0 +1,11 @@
+@import "../vars";
+
+footer {
+  background: $black-color;
+  color: $gray-color;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  padding: 13px;
+}

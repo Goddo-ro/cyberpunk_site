@@ -68,16 +68,18 @@
 
 @media screen and (min-width: 1920px) {
   #buy-game {
+    background-image: url("../../../assets/images/buy.jpg");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+
     .container {
       grid-template-columns: repeat(2, 1fr);
+      position: relative;
     }
   }
 
   .buy-game-img-container {
-    position: absolute;
-    left: 0;
-    right: 50%;
-    z-index: 3;
+    display: none;
   }
 
   .buy-game-text-container {
