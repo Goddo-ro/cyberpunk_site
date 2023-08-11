@@ -1,0 +1,43 @@
+@import "../vars";
+@import "../mixins";
+
+@import "form";
+
+$icon-small-width: 62px;
+
+#promotion {
+  background-image: url("../../../assets/images/promotion_background.png");
+  background-size: cover;
+  color: $white-color;
+
+  .container {
+    position: relative;
+  }
+}
+
+#promotion-icon {
+  left: $phones-margin-inline;
+  position: absolute;
+  width: $icon-small-width;
+  margin: 0;
+}
+
+.promotion-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  * {
+    height: fit-content;
+  }
+
+  .promotion-grid-images {
+    @include flex();
+    margin-bottom: 24px;
+
+    img {
+      width: 50%;
+    }
+  }
+}

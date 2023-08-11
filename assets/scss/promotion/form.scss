@@ -1,0 +1,44 @@
+@import "../vars";
+@import "../mixins";
+
+@import "checkbox";
+
+.promotion-grid-form {
+  @include flex($direction: column, $justify-content: start, $align-items: stretch);
+  margin-top: 48px;
+
+  & > *:not(:last-child) {
+    margin-top: 32px;
+  }
+
+  .promotion-grid-form__input,
+  .promotion-grid-form__image-input {
+    background: transparent;
+    outline: none;
+    font-weight: 300;
+
+    &::placeholder {
+      color: $white-color;
+    }
+  }
+
+  .promotion-grid-form__input {
+    border: none;
+    border-bottom: 1px solid $gray-color;
+  }
+
+  .promotion-grid-form__image-input {
+    border: 1px dashed $gray-color;
+    text-align: center;
+    padding: 50px 60px;
+
+    &::placeholder {
+      text-decoration: underline;
+    }
+  }
+
+  .button {
+    width: fit-content;
+    margin-bottom: 14px;
+  }
+}

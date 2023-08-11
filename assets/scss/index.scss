@@ -3,8 +3,10 @@
 
 @import "normalize";
 @import "button";
+
 @import "hero/hero";
 @import "game-preview/game-preview";
+@import "promotion/promotion";
 
 * {
   box-sizing: border-box;
@@ -17,7 +19,7 @@ h2 {
   margin: 0;
 }
 
-p, a, button {
+p, a, button, input, label {
   font: 16px $text-font;
   line-height: 32px;
 }
@@ -44,10 +46,10 @@ section:not(#hero) {
   max-width: $container-max-width;
   margin-inline: auto;
   padding: 20px 0;
-}
 
-.container > * {
-  margin-inline: $phones-margin-inline;
+  & > * {
+    margin-inline: $phones-margin-inline;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -56,12 +58,19 @@ section:not(#hero) {
     line-height: normal;
   }
 
-  p, a, button {
+  p, a, button, input, label {
     font-size: 18px;
     line-height: 34px;
   }
 
-  .container > * {
-    margin-inline: $laptops-margin-inline;
+  .container {
+    & > * {
+      margin-inline: $laptops-margin-inline;
+    }
+
+    p {
+      width: 80%;
+      max-width: 1024px;
+    }
   }
 }

@@ -6,11 +6,11 @@ $game-info-bottom: -50px;
 #hero {
   background-image: url("../../../assets/images/hero_carousel/1.jpg");
   min-height: calc(100vh + $game-info-bottom);
-}
 
-#hero > .container {
-  @include flex($direction: column, $justify-content: space-between);
-  position: relative;
+  .container {
+    @include flex($direction: column, $justify-content: space-between);
+    position: relative;
+  }
 }
 
 .hero-header {
