@@ -3,6 +3,7 @@
 
 #hp {
   background-image: url("../../../assets/images/hp_background.png");
+  background-size: cover;
 
   .container {
     @include flex($direction: column);

@@ -665,6 +665,7 @@ ul li img {
 }
 #hp {
   background-image: url("../../../assets/images/hp_background.png");
+  background-size: cover;
 }
 #hp .container {
   display: flex;
@@ -747,28 +748,73 @@ ul li img {
 #buy-game {
   color: #FFF;
   background: #000000;
-  padding-top: 0 !important;
+  padding: 0 !important;
 }
 #buy-game .container {
   padding: 0;
+  height: inherit;
 }
-#buy-game .container > img {
+#buy-game .buy-game-img-container {
+  background: url("../../../assets/images/buy.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 30%;
   margin-inline: 0;
   margin-bottom: 40px;
-  max-height: 200px;
 }
-#buy-game .buy-text-container h3 {
+#buy-game .buy-game-text-container h3 {
   margin-bottom: 24px;
 }
-#buy-game .buy-text-container ul {
+#buy-game .buy-game-text-container ul {
   margin-bottom: 40px;
 }
-#buy-game .buy-text-container .platforms-grid {
+#buy-game .buy-game-text-container .platforms-grid {
   display: grid;
   grid-template-columns: 64px 180px;
   gap: 56px;
 }
 
+@media screen and (min-width: 1024px) {
+  #buy-game .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+  #buy-game .container > img {
+    height: 100%;
+    max-height: unset;
+  }
+  #buy-game .buy-game-img-container {
+    height: 100%;
+    margin: 0;
+  }
+  #buy-game .buy-game-text-container {
+    padding: 70px 32px;
+  }
+  #buy-game .buy-game-text-container ul {
+    margin-bottom: 75px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #buy-game .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .buy-game-img-container {
+    position: absolute;
+    left: 0;
+    right: 50%;
+    z-index: 3;
+  }
+  .buy-game-text-container {
+    position: absolute;
+    left: 50%;
+  }
+  .buy-game-text-container h2 {
+    width: 50%;
+  }
+}
 * {
   box-sizing: border-box;
 }
