@@ -1,4 +1,5 @@
 @import "../mixins";
+@import "../vars";
 
 #game-preview {
   margin-top: 30px;
@@ -13,9 +14,36 @@
   gap: 32px;
 
   img {
-    object-fit: none;
     height: 100%;
     width: 100%;
     @include cut-corners;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #game-preview {
+    margin-top: 0;
+  }
+
+  #game-preview > .container h2 {
+    max-width: $header-container-max-width;
+  }
+
+  #game-preview > .container p {
+    width: 80%;
+    max-width: 1024px;
+  }
+
+  .container > .game-preview-grid {
+    margin-inline: $laptops-margin-inline;
+  }
+
+  .game-preview-grid {
+    margin-top: 70px;
+    grid-template-columns: repeat(2, 1fr);
+
+    :last-child {
+      grid-column: 1 / 3;
+    }
   }
 }

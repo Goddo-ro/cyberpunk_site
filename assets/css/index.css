@@ -388,7 +388,7 @@ template {
     position: unset;
     margin-left: auto;
     padding: 70px;
-    max-width: 600px;
+    max-width: 624px;
     align-items: flex-start;
   }
   .container > .game-info h2 {
@@ -408,13 +408,34 @@ template {
   gap: 32px;
 }
 .game-preview-grid img {
-  object-fit: none;
   height: 100%;
   width: 100%;
   clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
   margin-inline: 0;
 }
 
+@media screen and (min-width: 1024px) {
+  #game-preview {
+    margin-top: 0;
+  }
+  #game-preview > .container h2 {
+    max-width: 624px;
+  }
+  #game-preview > .container p {
+    width: 80%;
+    max-width: 1024px;
+  }
+  .container > .game-preview-grid {
+    margin-inline: 36px;
+  }
+  .game-preview-grid {
+    margin-top: 70px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .game-preview-grid :last-child {
+    grid-column: 1/3;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -467,6 +488,9 @@ section:not(#hero) {
   p, a, button {
     font-size: 24px;
     line-height: 40px;
+  }
+  .container > * {
+    margin-inline: 36px;
   }
 }
 

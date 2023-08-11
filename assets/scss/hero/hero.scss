@@ -1,7 +1,6 @@
 @import '../vars';
 @import '../mixins';
 
-$game-info-max-width: 600px;
 $game-info-bottom: -50px;
 
 #hero {
@@ -66,7 +65,7 @@ $game-info-bottom: -50px;
     position: unset;
     margin-left: auto;
     padding: 70px;
-    max-width: $game-info-max-width;
+    max-width: $header-container-max-width;
     align-items: flex-start;
 
     h2 {
