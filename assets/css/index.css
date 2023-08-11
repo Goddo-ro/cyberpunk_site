@@ -436,6 +436,22 @@ template {
     grid-column: 1/3;
   }
 }
+@media screen and (min-width: 1920px) {
+  #game-preview > .container h2 {
+    max-width: 100%;
+  }
+  .game-preview-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .game-preview-grid :nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .game-preview-grid :last-child {
+    grid-row: 1/3;
+    grid-column: 2/4;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -471,7 +487,7 @@ section:not(#hero) {
 .container {
   height: inherit;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1280px;
   margin-inline: auto;
   padding: 20px 0;
 }
@@ -486,8 +502,8 @@ section:not(#hero) {
     line-height: normal;
   }
   p, a, button {
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 34px;
   }
   .container > * {
     margin-inline: 36px;
