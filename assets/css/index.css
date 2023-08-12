@@ -340,7 +340,7 @@ ul li img {
 }
 
 #hero {
-  background-image: url("../../../assets/images/hero_carousel/1.jpg");
+  background-image: url("../images/hero_carousel/1.jpg");
   min-height: calc(100vh - 50px);
 }
 #hero .container {
@@ -571,7 +571,7 @@ ul li img {
 }
 
 #promotion {
-  background-image: url("../../../assets/images/promotion_background.png");
+  background-image: url("../images/promotion_background.png");
   background-size: cover;
   color: #FFF;
 }
@@ -664,7 +664,7 @@ ul li img {
   }
 }
 #hp {
-  background-image: url("../../../assets/images/hp_background.png");
+  background-image: url("../images/hp_background.png");
   background-size: cover;
 }
 #hp .container {
@@ -755,7 +755,7 @@ ul li img {
   height: inherit;
 }
 #buy-game .buy-game-img-container {
-  background: url("../../../assets/images/buy.jpg") no-repeat;
+  background: url("../images/buy.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -799,7 +799,7 @@ ul li img {
 }
 @media screen and (min-width: 1920px) {
   #buy-game {
-    background-image: url("../../../assets/images/buy.jpg");
+    background-image: url("../images/buy.jpg");
     background-repeat: no-repeat;
     background-size: 50% 100%;
   }
